@@ -1,0 +1,173 @@
+* { box-sizing: border-box }
+html { font-size: 20px }
+body {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.5;
+  color: #1d1d1d;
+  background: #f3f6ee;
+}
+a { color: #0b4f8a }
+a:hover { color: #08365e }
+a:focus-visible, button:focus-visible, .button:focus-visible {
+  outline: 3px solid #c9a227;
+  outline-offset: 2px;
+}
+.skip {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  background: #fff;
+  color: #1d1d1d;
+  padding: .4rem .7rem;
+  z-index: 10;
+}
+.skip:focus { left: .5rem; top: .5rem }
+
+.preview-banner {
+  background: #fff6d8;
+  color: #3a2e00;
+  border-bottom: 3px solid #c9a227;
+  text-align: center;
+  padding: .55rem 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .95rem;
+  line-height: 1.4;
+}
+.preview-banner a { font-weight: bold }
+
+.wrap { max-width: 860px; margin: 0 auto; padding: 0 1rem }
+
+.brand-bar { background: #fff; border-bottom: 4px solid #99cc33 }
+.brand-bar .wrap { padding: .7rem 1rem .5rem; text-align: center }
+.logo {
+  display: inline-block;
+  max-width: min(100%, 420px);
+}
+.logo img { width: 100%; height: auto; vertical-align: middle }
+
+nav {
+  background: #1e4a24;
+}
+nav .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: .15rem;
+  padding: .35rem .5rem;
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: .45rem .7rem;
+  border-radius: 4px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .95rem;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+}
+nav a:hover, nav a[aria-current="page"] { background: #2d6a34; color: #fff }
+nav a:focus-visible { outline-color: #ffe28a }
+
+main {
+  background: #fff;
+  padding: 1rem 1.2rem 1.4rem;
+  margin: 1rem auto;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0,0,0,.1);
+}
+h1 { font-size: 1.7rem; margin: .2rem 0 .5rem; color: #1e4a24 }
+h2 {
+  font-size: 1.3rem;
+  margin: 1.3rem 0 .45rem;
+  color: #1e4a24;
+  border-bottom: 2px solid #d7e6c4;
+  padding-bottom: .15rem;
+}
+h3 { font-size: 1.1rem; margin: 0 0 .25rem; color: #1e4a24 }
+p, ul { margin: .4rem 0 .7rem }
+ul { padding-left: 1.3rem }
+li { margin: .2rem 0 }
+
+.lead { font-size: 1.05rem }
+
+.button {
+  display: inline-block;
+  background: #1e4a24;
+  color: #fff;
+  text-decoration: none;
+  padding: .5rem .95rem;
+  border-radius: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .95rem;
+  margin: .25rem .35rem .25rem 0;
+  min-height: 44px;
+  line-height: 1.3;
+}
+.button:hover { background: #2d6a34; color: #fff }
+.button.secondary {
+  background: #fff;
+  color: #1e4a24;
+  border: 2px solid #1e4a24;
+}
+.button.secondary:hover { background: #eef6ea; color: #1e4a24 }
+
+.split { display: flex; gap: 1.1rem; align-items: flex-start }
+.split img { width: 160px; flex: none; border-radius: 6px; height: auto }
+.school { width: 110px }
+
+.game, .place, .card {
+  background: #f4f8ef;
+  border-left: 5px solid #99cc33;
+  padding: .75rem 1rem .85rem;
+  margin: .8rem 0;
+  border-radius: 4px;
+}
+.game .when { font-family: Arial, Helvetica, sans-serif; font-size: .9rem; color: #333; margin: 0 0 .15rem }
+.meta { margin: .15rem 0 }
+.note { font-size: .9rem; color: #444 }
+
+.schedule { width: 100%; border-collapse: collapse; margin: .6rem 0 1rem; font-size: .95rem }
+.schedule th {
+  text-align: left;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .8rem;
+  color: #444;
+  border-bottom: 2px solid #d7e6c4;
+  padding: .35rem .4rem;
+}
+.schedule td { border-bottom: 1px solid #e6eee0; padding: .5rem .4rem; vertical-align: top }
+.schedule .day { font-weight: bold; white-space: nowrap; width: 8.5rem }
+
+.month h3 { margin-top: 1rem }
+.month ul { list-style: none; padding-left: 0 }
+.month li {
+  padding: .45rem 0;
+  border-bottom: 1px solid #e6eee0;
+}
+.month .date { font-weight: bold; font-family: Arial, Helvetica, sans-serif }
+
+footer {
+  text-align: center;
+  font-size: .85rem;
+  color: #444;
+  padding: .4rem 0 1.6rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+footer p { margin: .25rem 0 }
+
+@media (max-width: 600px) {
+  html { font-size: 18px }
+  nav a { padding: .4rem .5rem }
+  main { margin: .5rem 0; border-radius: 0; padding: .85rem .9rem 1.2rem }
+  .split { flex-direction: column }
+  .split img { width: 140px }
+  .schedule, .schedule thead, .schedule tbody, .schedule th, .schedule td, .schedule tr {
+    display: block;
+  }
+  .schedule thead { position: absolute; left: -999px; top: -999px }
+  .schedule tr { border-bottom: 2px solid #d7e6c4; margin-bottom: .6rem; padding-bottom: .4rem }
+  .schedule td { border: 0; padding: .15rem 0 }
+  .schedule .day { width: auto }
+}
