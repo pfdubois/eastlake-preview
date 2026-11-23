@@ -159,8 +159,12 @@ footer p { margin: .25rem 0 }
 
 @media (max-width: 600px) {
   html { font-size: 18px }
+  .preview-banner { font-size: .9rem; padding: .4rem .7rem }
+  .brand-bar .wrap { padding: .4rem 1rem .2rem }
+  .logo { max-width: 300px }
   nav a { padding: .4rem .5rem }
-  main { margin: .5rem 0; border-radius: 0; padding: .85rem .9rem 1.2rem }
+  main { margin: .5rem 0; border-radius: 0; padding: .7rem .9rem 1.2rem }
+  h1 { font-size: 1.5rem }
   .split { flex-direction: column }
   .split img { width: 140px }
   .schedule, .schedule thead, .schedule tbody, .schedule th, .schedule td, .schedule tr {
